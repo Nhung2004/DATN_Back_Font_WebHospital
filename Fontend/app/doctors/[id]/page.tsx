@@ -131,7 +131,7 @@ export default function DoctorDetailPage() {
                       <p className="text-blue-600 font-medium text-lg mb-4">
                         {selectedDoctor.specialization}
                       </p>
-                      
+
                       <div className="w-full pt-4 border-t border-gray-100 space-y-3">
                         <div className="flex items-center gap-3 text-gray-600 text-sm">
                           <div className="w-8 h-8 rounded bg-gray-100 flex items-center justify-center">
@@ -272,11 +272,10 @@ export default function DoctorDetailPage() {
                                 setSelectedSlotId(slot.id);
                                 setSelectedSlotTime(slot.startTime);
                               }}
-                              className={`p-3 border rounded-md font-medium transition ${
-                                selectedSlotId === slot.id
+                              className={`p-3 border rounded-md font-medium transition ${selectedSlotId === slot.id
                                   ? 'bg-blue-600 text-white border-blue-600'
                                   : 'bg-white border-gray-300 hover:border-blue-600'
-                              } ${!slot.isAvailable ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                } ${!slot.isAvailable ? 'opacity-50 cursor-not-allowed' : ''}`}
                               disabled={!slot.isAvailable}
                             >
                               {slot.startTime}
@@ -358,7 +357,7 @@ export default function DoctorDetailPage() {
                       </div>
                     )}
                   </div>
-                  
+
                   <div className="flex gap-4">
                     <Button
                       variant="outline"

@@ -268,6 +268,39 @@ class ApiService {
     return (await this.client.get('/api/hospitals')).data;
   }
 
+  // Specialty Admin endpoints
+  async getAllSpecialtiesAdmin() {
+    return (await this.client.get('/api/admin/specialties')).data;
+  }
+
+  async getSpecialtyById(id: string | number) {
+    return (await this.client.get(`/api/admin/specialties/${id}`)).data;
+  }
+
+  async createSpecialty(data: any) {
+    const payload = {
+      name: data.name,
+      vietnamName: data.vietnamName,
+      icon: data.icon,
+      description: data.description
+    };
+    return (await this.client.post('/api/admin/specialties', payload)).data;
+  }
+
+  async updateSpecialty(id: string | number, data: any) {
+    const payload = {
+      name: data.name,
+      vietnamName: data.vietnamName,
+      icon: data.icon,
+      description: data.description
+    };
+    return (await this.client.put(`/api/admin/specialties/${id}`, payload)).data;
+  }
+
+  async deleteSpecialty(id: string | number) {
+    return (await this.client.delete(`/api/admin/specialties/${id}`)).data;
+  }
+
   // Appointment endpoints
   async bookAppointment(data: any) {
     const formattedTime = data.appointmentTime?.length === 5

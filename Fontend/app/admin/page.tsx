@@ -334,10 +334,11 @@ export default function AdminDashboard() {
 
           {/* Operational Management */}
           <h2 className="text-2xl font-black text-slate-900 mb-6">Operations Management</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {[
               { title: 'User Base', desc: 'Patients and medical staff', link: '/admin/users', icon: UserCheck, color: 'blue' },
               { title: 'Specialists', desc: 'Doctor profiles & schedules', link: '/admin/doctors', icon: Stethoscope, color: 'emerald' },
+              { title: 'Specialty Hub', desc: 'Medical departments & units', link: '/admin/specialties', icon: Activity, color: 'indigo' },
               { title: 'Appointments', desc: 'Booking logs & status', link: '/admin/appointments', icon: Calendar, color: 'amber' },
               { title: 'Analytics', desc: 'Detailed business reports', link: '/admin/statistics', icon: Activity, color: 'rose' },
             ].map((item, i) => (
